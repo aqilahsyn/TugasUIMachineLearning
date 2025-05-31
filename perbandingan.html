@@ -37,29 +37,37 @@
 
       <div class="row mt-4">
         <!-- Card 1 -->
-        <div class="col-md-4">
+        <div class="col-md-6 mb-4">
           <div class="card p-3">
-            <h5>Visualisasi Model 1</h5>
-            <img src="img/chart1.png" class="img-fluid" alt="Chart Model 1">
+            <h5>Visualisasi EDA Before Filtering</h5>
+            <figure class="mb-3">
+              <img src="img/before.png" class="img-fluid" alt="EDA before">
+              <figcaption style="text-align: center; font-size: 0.9em; margin-top: 5px;">
+                Gambar 1: Hasil EDA sebelum filtering Unemployment
+              </figcaption>
+            </figure>
+            <div style="margin-top: 10px; font-size: 0.95em; text-align: justify;">
+              Visualisasi di atas menunjukkan distribusi masing-masing fitur numerik. Terlihat bahwa variabel <b>Weekly_Sales</b> memiliki distribusi yang sangat skewed, <b>Holiday_Flag</b> didominasi oleh data non-holiday, dan <b>Unemployment</b> memiliki beberapa nilai ekstrim yang akan diproses lebih lanjut.
+            </div>
           </div>
         </div>
       
         <!-- Card 2 -->
-        <div class="col-md-4">
+        <div class="col-md-6 mb-4">
           <div class="card p-3">
-            <h5>Visualisasi Model 2</h5>
-            <img src="img/chart2.png" class="img-fluid" alt="Chart Model 2">
+            <h4>Visualisasi EDA After Filtering</h5>
+            <figure class="mb-3">
+              <img src="img/afterfiltering.png" class="img-fluid" alt="EDA after">
+              <figcaption style="text-align: center; font-size: 0.9em; margin-top: 5px;">
+                Gambar 2: Hasil EDA sesudah filtering Unemployment
+              </figcaption>
+            </figure>
+            <div style="margin-top: 10px; font-size: 0.95em; text-align: justify;">
+              Setelah dilakukan filtering pada variabel <b>Unemployment</b> dengan menghapus nilai-nilai ekstrim di atas 12, distribusi data menjadi lebih bersih dan mendekati distribusi normal. Proses ini membantu meminimalkan pengaruh outlier yang dapat menyebabkan bias pada proses modeling. Variabel lainnya seperti <b>Weekly_Sales</b> dan <b>Holiday_Flag</b> tidak mengalami perubahan signifikan karena filtering hanya dilakukan pada <b>Unemployment</b>.
+            </div>
           </div>
         </div>
-      
-        <!-- Card 3 -->
-        <div class="col-md-4">
-          <div class="card p-3">
-            <h5>Visualisasi Model 3</h5>
-            <img src="img/chart3.png" class="img-fluid" alt="Chart Model 3">
-          </div>
-        </div>
-      </div>      
+      </div>  
     </div>
   </div>
 </body>
